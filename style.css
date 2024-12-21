@@ -1,0 +1,160 @@
+/* style.css */
+
+/* Basic Reset and General Styles */
+* {
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8; /* Light background */
+}
+
+a {
+    text-decoration: none;
+    color: #007bff; /* Blue link color */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+a:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+/* Header Styles */
+header {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: sticky; /* Keeps the header at the top on scroll */
+    top: 0;
+    z-index: 100; /* Ensure header stays on top of other content */
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* Center the navigation links */
+}
+
+nav a {
+    margin: 0 15px;
+    font-weight: 500;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+    min-height: calc(100vh - 120px); /* Ensure main takes up full viewport height minus header and footer */
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+/* Hero Section Styles */
+.hero {
+    text-align: center;
+    padding: 100px 0;
+    background-color: #f0f0f0;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Product Grid Styles */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    grid-gap: 20px;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transitions */
+}
+
+.product:hover {
+    transform: translateY(-5px); /* Slightly move up on hover */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-link {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #eee;
+    color: #333;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+/* Product Details Styles */
+.product-details {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start; /* Align items to the top in flexbox */
+}
+
+.product-details img {
+    max-width: 400px;
+    height: auto;
+}
+
+.product-info {
+    flex: 1; /* Allow product info to take up remaining space */
+}
+
+.product-info .price {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .product-details {
+        flex-direction: column;
+    }
+
+    .product-details img {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
